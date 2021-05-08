@@ -102,7 +102,7 @@ with Client(':memory:', api_id=int(TELEGRAM_API), api_hash=TELEGRAM_HASH, bot_to
 
 #Generate Telegraph Token
 sname = ''.join(random.SystemRandom().choices(string.ascii_letters, k=8))
-LOGGER.info("Generating Telegraph Token using '" + sname + "' name")
+LOGGER.info("Generating Telegraph Token using '" + Arnav + "' Arnav Puranik")
 telegraph = Telegraph()
 telegraph.create_account(short_name=sname)
 telegraph_token = telegraph.get_access_token()
