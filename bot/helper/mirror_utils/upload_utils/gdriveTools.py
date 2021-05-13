@@ -98,7 +98,7 @@ class GoogleDriveHelper:
                                      resumable=False)
         file_metadata = {
             'name': file_name,
-            'description': 'Uploaded using Slam Mirror Bot',
+            'description': 'Uploaded using Arnavs Mirror Bot',
             'mimeType': mime_type,
         }
         if parent_id is not None:
@@ -151,7 +151,7 @@ class GoogleDriveHelper:
         # File body description
         file_metadata = {
             'name': file_name,
-            'description': 'Uploaded by Arnav's Mirror Bot',
+            'description': 'Uploaded by Arnavs Mirror Bot',
             'mimeType': mime_type,
         }
         if parent_id is not None:
@@ -480,9 +480,9 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
-                                 title = 'Arnav's Mirror Bot - Search',
+                                 title = 'Arnavs Mirror Bot - Search',
                                  author_name='Arnav',
-                                 author_url='https://github.com/arnavpuranik/slam-mirrorbot',
+                                 author_url='https://github.com/arnavpuranik/mirrorbott',
                                  html_content=content)
         return
 
@@ -559,7 +559,7 @@ class GoogleDriveHelper:
 
             for content in self.telegraph_content :
                 self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                                        title = 'Arnav's Mirror Bot Search',
+                                                        title = 'Arnavs Mirror Bot Search',
                                                         author_name='Arnav',
                                                         author_url='https://github.com/arnav/slam-mirrorbot',
                                                         html_content=content
@@ -569,7 +569,7 @@ class GoogleDriveHelper:
             if self.num_of_path > 1:
                 self.edit_telegraph()
 
-            msg = f"<b>🔎 Search Results For <i>{fileName}</i></b> \n<b>📚 Found {len(response['files'])} results</b>"
+            msg = f"<b>Search Results For <i>{fileName}</i></b> \n<b> Found {len(response['files'])} results</b>"
             buttons = button_build.ButtonMaker()   
             buttons.buildbutton("HERE", f"https://telegra.ph/{self.path[0]}")
 
